@@ -1,0 +1,79 @@
+a { color: inherit; }
+
+#active {
+    color: green;
+    cursor: pointer;
+}
+
+#add { cursor: pointer; }
+
+.advanced, #check, input[type="checkbox"] { display: none; }
+
+#ap {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+body { background: -webkit-linear-gradient(#9999aa, white); }
+
+#code {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0em 1em 1em 0em;
+    box-shadow: 0em 1em 1em black;
+    color: white;
+    display: none;
+    left: 0%;
+    padding: 1em;
+    position: fixed;
+    text-align: center;
+    top: 33%;
+    z-index: 2;
+}
+
+input { text-align: right; }
+
+#save {
+    color: blue;
+    cursor: pointer;
+}
+
+#status {
+    font-size: 110%;
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+}
+
+table {
+    background: -webkit-linear-gradient(white, #9999aa);
+    background-clip: padding-box;
+    border: solid rgba(0, 0, 0, 0.75);
+    border-radius: 1em;
+    box-shadow: 0em 1em 1em black;
+    margin: auto;
+    padding: 1em 1em 1em 1.25em;
+    position: relative;
+    z-index: 1;
+}
+
+td, th { text-align: left; }
+
+.uncheck {
+    font-weight: normal;
+    right: 1em;
+    position: relative;
+    text-align: right;
+}
+
+#welcome {
+    background: -webkit-linear-gradient(right, black, #9999aa);
+    border: solid rgba(0, 0, 0, 0.75);
+    border-radius: 1em 0em 0em 1em;
+    box-shadow: 0em 1em 1em black;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    right: 0%;
+    text-align: center;
+    top: 40%;
+    width: 11em;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <title>Preferences</title>
+    <script type="text/javascript" src="mappings.js"></script>
+    <script type="text/javascript" src="prefs.js"></script>
+    <script type="text/javascript" src="startKS.js"></script>
+    <script type="text/javascript" src="endKS.js"></script>
+    <link rel="stylesheet" type="text/css" href="prefs.css">
+  </head>
+  <body>
+    <div id="welcome">
+      <span id="status">Welcome to KeyStroke</span><br>
+      <a accesskey="a" id="ap" onclick="advance()">Advanced Preferences</a><br>
+      <a accesskey="k" id="add" onclick="add()">Add Key [+]</a><br>
+      <a accesskey="h" href="http://sites.google.com/site/solushex/keystroke">Homepage</a><br>
+      <a accesskey="c" href="mailto:solushex@gmail.com">Contact</a><br>
+      <a accesskey="f" href="http://groups.google.com/group/keystrokegroup">Forum</a>
+    </div>
+    <div id="code">
+      <textarea rows="10" cols="30" style="font: 100% monospace;">// Code</textarea><br><br>
+      <button onclick="save()">Save</button> <button onclick="deleter()">Delete</button>
+    </div>
+    <table>
+      <tr><th><input type="checkbox" id="preferencesbox"> Open / <span id="save"
+      onclick="save()">Save</span> Preferences&nbsp;</th><td><input id="preferences"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="activatebox"> Toggle <span id="active" onclick="toggler()">Active</span></th><td><input id="activate"><button>Clear</button></td></tr>
+      <tr class="advanced"><th><input type="checkbox" id="forcebox"> Force Active</th><td><input id="force"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Automatically</th><td><input id="blue" size="30"></td></tr>
+      <tr><th><input type="checkbox" id="scrolldownbox"> Scroll Down</th><td><input id="scrolldown"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="scrollupbox"> Scroll Up</th><td><input id="scrollup"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="scrollleftbox"> Scroll Left</th><td><input id="scrollleft"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="scrollrightbox"> Scroll Right</th><td><input id="scrollright"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Scroll</th><td><input id="scrollpx" size="2"> pixels</td></tr>
+      <tr><th><input type="checkbox" id="pagedownbox"> Page Down</th><td><input id="pagedown"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="pageupbox"> Page Up</th><td><input id="pageup"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="pageleftbox"> Page Left</th><td><input id="pageleft"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="pagerightbox"> Page Right</th><td><input id="pageright"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Page Screen &nbsp; &ndash;</th><td><input id="pagepx" size="2"> pixels</td></tr>
+      <tr><th><input type="checkbox" id="homebox"> Home</th><td><input id="home"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="endbox"> End</th><td><input id="end"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="setmarkbox"> Set Mark</th><td><input id="setmark"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="jumpmarkbox"> Jump To Mark</th><td><input id="jumpmark"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="backbox"> Back</th><td><input id="back"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="forwardbox"> Forward</th><td><input id="forward"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="skipbackbox"> Skip Back</th><td><input id="skipback"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="skipforwardbox"> Skip Forward</th><td><input id="skipforward"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Skip</th><td><input id="skip" size="2"> pages</td></tr>
+      <tr><th><input type="checkbox" id="upbox"> Parent Directory</th><td><input id="up"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="parentbox"> Parent Domain</th><td><input id="parent"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="topbox"> Top Directory</th><td><input id="top"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="focusbox"> Focus Field</th><td><input id="focus"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Elements</th><td><input id="red" size="30"></td></tr>
+      <tr><th><input type="checkbox" id="pagebox"> Focus Page</th><td><input id="page"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Automatically</th><td><input id="green" size="30"></td></tr>
+      <tr class="advanced"><th class="uncheck">Clear Selection</th><td><select id="selection">
+            <option value="true">Enabled</option>
+            <option value="false">Disabled</option>
+      </select></td></tr>
+      <tr><th><input type="checkbox" id="clickbox"> Follow Link</th><td><input id="click"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">In New Page</th><td><input id="clicknew"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="linkbox"> Link Text Links</th><td><input id="link"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="centerbox"> Center Content</th><td><input id="center"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="wrapbox"> Wrap Text</th><td><input id="wrap"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="framebox"> Break Frame</th><td><input id="frame"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="zoominbox"> Zoom In</th><td><input id="zoomin"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="zoomoutbox"> Zoom Out</th><td><input id="zoomout"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Zoom</th><td><input id="zoominc" size="2"> percent</td></tr>
+      <tr><th><input type="checkbox" id="zoomresetbox"> Actual Size</th><td><input id="zoomreset"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Remember Zoom</th><td><select id="memoryzoom">
+            <option value="true">Enabled</option>
+            <option value="false">Disabled</option>
+      </select></td></tr>
+      <tr><th><input type="checkbox" id="nexttabbox"> Next Tab</th><td><input id="nexttab"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="previoustabbox"> Previous Tab</th><td><input id="previoustab"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="movetabrightbox"> Move Tab Right</th><td><input id="movetabright"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="movetableftbox"> Move Tab Left</th><td><input id="movetableft"><button>Clear</button></td></tr>
+      <tr class="advanced"><th><input type="checkbox" id="numbersbox"> Select Tabs</th><td><select id="numbmod">
+            <option value="true">Ctrl+</option>
+            <option value="false"></option>
+      </select><select id="numbers">
+            <option value="true">Numbers</option>
+            <option value="false">None</option>
+      </select></td></tr>
+      <tr class="advanced"><th class="uncheck">Two-Digit Tabs</th><td><select id="twodigit">
+            <option value="true">Enabled</option>
+            <option value="false">Disabled</option>
+      </select></td></tr>
+      <tr><th><input type="checkbox" id="tabbox"> New Tab</th><td><input id="tab"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">URL</th><td><input id="tabpage" size="30"></td></tr>
+      <tr><th><input type="checkbox" id="windowbox"> New Window</th><td><input id="window"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">URL</th><td><input id="windowpage" size="30"></td></tr>
+      <tr><th><input type="checkbox" id="ahomebox"> Homepage</th><td><input id="ahome"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">URL</th><td><input id="ahomepage" size="30"></td></tr>
+      <tr><th><input type="checkbox" id="swappagebox"> Swap Page</th><td><input id="swappage"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="reloadbox"> Reload Page</th><td><input id="reload"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="closebox"> Close Page</th><td><input id="close"><button>Clear</button></td></tr>
+      <tr><th><input type="checkbox" id="nextbox"> Next Page</th><td><input id="next"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Text</th><td><input id="nextpattern" size="30"></td></tr>
+      <tr class="advanced"><th class="uncheck">Elements</th><td><input id="nextelements" size="30"></td></tr>
+      <tr><th><input type="checkbox" id="previousbox"> Previous Page</th><td><input id="previous"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Text</th><td><input id="previouspattern" size="30"></td></tr>
+      <tr class="advanced"><th class="uncheck">Elements</th><td><input id="previouselements" size="30"></td></tr>
+      <tr class="advanced"><th class="uncheck">Space Bar</th><td><select id="spacebar">
+            <option value="true">Next Page</option>
+            <option value="false">Normal</option>
+      </select></td></tr>
+      <tr><th><input type="checkbox" id="readerbox"> Show Reader</th><td><input id="reader"><button>Clear</button></td></tr>
+      <tr class="advanced"><th class="uncheck">Automatically</th><td><input id="yellow" size="30"></td></tr>
+      <tr><td id="check">&#10004; Keys will not toggle</td></tr>
+      <tr class="advanced"><th class="uncheck">Disabled Sites</th><td><input id="black" size="30"></td></tr>
+      <tr class="advanced"><th class="uncheck">Disabled Elements</th><td><input id="grey" size="30"></td></tr>
+      <tr id="update" class="advanced"><th class="uncheck">Update Elements</th><td><select id="mutate">
+            <option value="true">Enabled</option>
+            <option value="false">Disabled</option>
+      </select></td></tr>
+      <tr class="advanced"><th class="uncheck">Priority Elements</th><td><input id="brown" size="30"></td></tr>
+      <tr class="advanced"><th class="uncheck">Safari Cache Hack</th><td><select id="hack">
+            <option value="true">Enabled</option>
+            <option value="false">Disabled</option>
+      </select></td></tr>
+    </table>
+  </body>
+</html>
