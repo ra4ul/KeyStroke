@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Rahul Abrol</string>
 	<key>Builder Version</key>
-	<string>11601.1.56</string>
+	<string>13604.4.7.1.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>KeyStroke</string>
 	<key>CFBundleIdentifier</key>
@@ -65,7 +65,7 @@
 	<key>Description</key>
 	<string>Browse the web from the home keys</string>
 	<key>DeveloperIdentifier</key>
-	<string>XNKJEUX3L5</string>
+	<string></string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
